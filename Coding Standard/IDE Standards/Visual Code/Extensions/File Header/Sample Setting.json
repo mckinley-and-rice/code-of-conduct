@@ -1,0 +1,143 @@
+"psi-header.config": {
+    "forceToTop": true,
+    "blankLinesAfter": 6,
+    "license": "Custom"
+},
+"psi-header.changes-tracking": {
+    "isActive": true,
+    "modAuthor": "Modified By: ",
+    "modDate": "Last Modified: ",
+    "modDateFormat": "date",
+    "include": [],
+    "exclude": [
+        "markdown",
+        "json"
+    ],
+    "excludeGlob": [
+        "out/**",
+        "src/**/*.xyz"
+    ],
+    "autoHeader": "manualSave"
+},
+"psi-header.license-text": [
+    "This product includes software developed at",
+    "The McKinley & Rice, Inc. (https://www.mckinleyrice.com/).",
+    
+    "This material is proprietary to The McKinley & Rice.",
+    "All rights reserved. The methods and techniques described ",
+    "herein are considered trade secrets and/or confidential. ",
+    "Reproduction or distribution, in whole or in part, is forbidden ",
+    "except by express written permission of The McKinley & Rice.",
+
+
+],
+"psi-header.variables": [
+    ["company", "McKinley & Rice, Inc."],
+    ["author", "Hemprasad Badgujar"],
+    ["authoremail", "admin@mckinleyrice.com"]
+],
+"psi-header.lang-config": [
+    {
+        "language": "lua",
+        "begin": "--[[",
+        "prefix": "--",
+        "end": "--]]",
+        "blankLinesAfter": 0
+    },
+    {
+        "language": "python",
+        "begin": "###",
+        "prefix": "# ",
+        "end": "###",
+        "blankLinesAfter": 0,
+        "beforeHeader": [
+            "#!/usr/bin/env python3",
+            "# -*- coding:utf-8 -*-"
+        ]
+    },
+    {
+        "language": "javascript",
+        "begin": "/**",
+        "prefix": " * ",
+        "suffix": " # ",
+        "end": " */",
+        "lineLength": 100,
+        "blankLinesAfter": 2,
+        "forceToTop": true
+    },
+    {
+        "language": "typescript",
+        "mapTo": "javascript"
+    },
+    
+    {
+        "language": "*",
+        "begin": "/**",
+        "prefix": " * ",
+        "suffix": " * ",
+        "end": " */",
+        "blankLinesAfter": 2,
+        "forceToTop": false
+    },
+
+
+],
+"psi-header.templates": [
+    {
+        "language": "*",
+        "template": [
+            "",
+            "Copyright (c) <<year>> <<company>>",
+            "<<licensetext>>",
+            "",
+           
+            "File: <<filepath>>",
+            "Project: <<projectpath>>",
+            "Created Date: <<filecreated('dddd, Do MMMM YYYY, h:mm:ss a')>>",
+            "Author: <<author>>",
+            "-----",
+            "Last Modified:  ",
+            "Modified By: ",
+                
+            "-----",
+            "HISTORY:",
+            "Date      \tBy\tComments",
+            "----------\t---\t----------------------------------------------------------"
+        ],
+        "changeLogCaption": "HISTORY:",
+        "changeLogHeaderLineCount": 3,
+        "changeLogEntryTemplate": [
+            "<<dateformat('YYYY-MM-DD')>>\t<<initials>>\t"
+        ]
+    },
+    {
+        "language": "javascript",
+        "template": [
+            "",
+            "Copyright (c) <<year>> <<company>>",
+            "<<licensetext>>",
+            "",
+           
+            "File: <<filepath>>",
+            "Created Date: <<filecreated('dddd, MMMM Do YYYY, h:mm:ss a')>>",
+            "Author: <<author>>",
+            "-----",
+            "Last Modified: <<filecreated('dddd MMMM Do YYYY h:mm:ss a')>>",
+            "Modified By: <<author>> at <<<authoremail>>> ",
+                
+            "-----",
+            "HISTORY:",
+            "Date      \tBy\tComments",
+            "----------\t---\t----------------------------------------------------------"
+        ],
+        "changeLogCaption": "HISTORY:",
+        "changeLogHeaderLineCount": 3,
+        "changeLogEntryTemplate": [
+            "<<dateformat(DD-MM-YYYY)>>\t<<initials>>\t"
+        ]
+    },
+    {
+        "language": "typescript",
+        "mapTo": "javascript"
+    }
+],
