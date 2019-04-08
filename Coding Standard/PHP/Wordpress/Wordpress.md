@@ -28,6 +28,6 @@ Coding standards for languages used in WordPress :-
 
 
 Reference:- 
-[https://wpcrib.com/wordpress-coding-standards/](Wordpress.md)
-[https://make.wordpress.org/core/handbook/best-practices/coding-standards/html/](Wordpress.md)
-[https://www.hongkiat.com/blog/wordpress-coding-standard/](Wordpress.md)
+[https://wpcrib.com/wordpress-coding-standards/](https://wpcrib.com/wordpress-coding-standards/)
+[https://make.wordpress.org/core/handbook/best-practices/coding-standards/html/](https://make.wordpress.org/core/handbook/best-practices/coding-standards/html/)
+[https://www.hongkiat.com/blog/wordpress-coding-standard/](https://www.hongkiat.com/blog/wordpress-coding-standard/)
