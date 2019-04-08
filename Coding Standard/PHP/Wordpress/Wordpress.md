@@ -21,24 +21,24 @@ Coding standards for languages used in WordPress :-
 
 (A) Indentation: Your HTML code should contain a proper indentation. For example, using Tabs instead of Spaces helps you structure your HTML code. It also improves code readability.
 Proper indentation
-<div class=”entry-content”>
+<div class="entry-content">
        <p>Name, Father name</p>
 </div>
 Improper indentation
-<div class=”entry-content”>
+<div class="entry-content">
 <p>Name, Father name</p>
 </div>
 (B) Single or Double quotes: HTML code snippets should have proper quotes for attributes. When using attributes with values, you must enclose values within single or double quotes.
 Correct
-type=”text”
-type=’text’
+type="text"
+type='text'
 Incorrect
 type=text
 (C) Attributes and Tags: Always write HTML attributes and tags in lowercase. It makes a difference for machine interpretation. You can also take care of the human readability.
 Machine interpretation
-<meta http-equiv=”content-type” content=””text/html; charset=utf-8” />
+<meta http-equiv="content-type" content="text/html;" charset=utf-8” />
 Human readability
-<a href=”http://example.com/” title=”Description Here”>Example.com</a>
+<a href="http://example.com/" title="Description Here">Example.com</a>
 (D) Close elements properly: Close all HTML tags properly. Also, take care of the spaces in self-closing tags.
 Use
 <br />
