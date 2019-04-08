@@ -1,9 +1,9 @@
-What are WordPress coding standards?
+## What are WordPress coding standards?
 
 WordPress coding standards refer to a set of rules for WordPress developers.
 According to WordPress core development Blog, following four (mentioned below) WordPress coding standards ensures seamless development, avoids errors, and makes it easy to manage, contribute, and develop the WordPress platform.
 
-Why have coding standards?
+## Why have coding standards?
 
 Coding standards help avoid common coding errors, improve the readability of code, and simplify modification. They ensure that files within the project appear as if they were created by a single person.
 
@@ -17,9 +17,10 @@ Coding standards for languages used in WordPress :-
     3. WordPress CSS Coding Standards.
     4. WordPress JavaScript Coding Standards.
 
-1. WordPress HTML Coding Standards.
+#### 1. WordPress HTML Coding Standards.
 
-(A) Indentation: Your HTML code should contain a proper indentation. For example, using Tabs instead of Spaces helps you structure your HTML code. It also improves code readability.
+(A) Indentation:
+ Your HTML code should contain a proper indentation. For example, using Tabs instead of Spaces helps you structure your HTML code. It also improves code readability.
 
 (B) Single or Double quotes: HTML code snippets should have proper quotes for attributes. When using attributes with values, you must enclose values within single or double quotes.
 (C) Attributes and Tags: Always write HTML attributes and tags in lowercase. It makes a difference for machine interpretation. You can also take care of the human readability.
@@ -31,3 +32,44 @@ Reference:-
 [https://wpcrib.com/wordpress-coding-standards/](https://wpcrib.com/wordpress-coding-standards/)
 [https://make.wordpress.org/core/handbook/best-practices/coding-standards/html/](https://make.wordpress.org/core/handbook/best-practices/coding-standards/html/)
 [https://www.hongkiat.com/blog/wordpress-coding-standard/](https://www.hongkiat.com/blog/wordpress-coding-standard/)
+
+
+
+#### 2. WordPress CSS Coding Standards.
+(1) Structure your style sheet properly: Like other languages, WordPress coding standards instruct writing clean CSS structures.
+
+Correct
+(setq markdown-xhtml-header-content
+      "<style type='text/css'>
+#selector {
+background: #fff;
+color: #000;
+}
+</style>")
+
+Incorrect
+(setq markdown-xhtml-header-content
+      "<style type='text/css'>
+#selector {
+color: #000;
+}
+#selector { background: #fff; color: #000; }
+</style>")
+
+(2) Don’t repeat properties: Along with properties, use short words for attributes.
+
+Correct
+(setq markdown-xhtml-header-content
+      "<style type='text/css'>
+background: #fff;
+</style>")
+Incorrect
+(setq markdown-xhtml-header-content
+      "<style type='text/css'>
+background: #FFFFFF;
+</style>")
+(3) Enter values correctly: Carefully enter values. Take care of the space and semicolons.
+
+
+(4) Best practices: Remove the old code structure before you attempt to add new for solving a problem.
+
