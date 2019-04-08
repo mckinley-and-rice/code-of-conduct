@@ -1,14 +1,10 @@
 ## Coding Standard Rules For Solidity.
 
-1 - can't commit to version control any piece of code which doesn't match some rules
-2 - No more than one statement per line.
-3 - Line length should not exceed 80 or 100 characters.
-4 - Test class must start with the name of the class they are testing followed by ‘Test’. E.g. ServerConfigurationTest.
-5 - One character variable names should only be used in loops or for temporary variables
-6 - Use Test Driven Development. [Recommendation. Cannot be enforced.]
-
-
-
+ - Can't commit to version control any piece of code which doesn't match some rules
+ - No more than one statement per line. 
+ - Test class must start with the name of the class they are testing followed by ‘Test’. E.g. ServerConfigurationTest.
+ - Use Test Driven Development. [Recommendation. Cannot be enforced.]
+ 
 
 ## Naming Conventions
 Indentation
