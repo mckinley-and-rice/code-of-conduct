@@ -1,4 +1,3 @@
-
 What are WordPress coding standards?
 
 WordPress coding standards refer to a set of rules for WordPress developers.
