@@ -16,11 +16,11 @@ Indentation
  - Within a contract surround function declarations with a single blank line.
 
 ## Layout
- -Keeping lines under a maximum of 79 (or 99) characters helps readers easily parse the code.
- -The first argument should not be attached to the opening parenthesis.
- -One, and only one, indent should be used.
- -Each argument should fall on its own line.
- -The terminating element, );, should be placed on the final line by itself.
+ - Keeping lines under a maximum of 79 (or 99) characters helps readers easily parse the code.
+ - The first argument should not be attached to the opening parenthesis.
+ - One, and only one, indent should be used.
+ - Each argument should fall on its own line.
+ - The terminating element, );, should be placed on the final line by itself.
 
 
 ## Source File Encoding
