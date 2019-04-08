@@ -20,34 +20,14 @@ Coding standards for languages used in WordPress :-
 1. WordPress HTML Coding Standards.
 
 (A) Indentation: Your HTML code should contain a proper indentation. For example, using Tabs instead of Spaces helps you structure your HTML code. It also improves code readability.
-Proper indentation
-<div class="entry-content">
-       <p>Name, Father name</p>
-</div>
-Improper indentation
-<div class="entry-content">
-<p>Name, Father name</p>
-</div>
+
 (B) Single or Double quotes: HTML code snippets should have proper quotes for attributes. When using attributes with values, you must enclose values within single or double quotes.
-Correct
-type="text"
-type='text'
-Incorrect
-type=text
 (C) Attributes and Tags: Always write HTML attributes and tags in lowercase. It makes a difference for machine interpretation. You can also take care of the human readability.
-Machine interpretation
-<meta http-equiv="content-type" content="text/html;" charset=utf-8” />
-Human readability
-<a href="http://example.com/" title="Description Here">Example.com</a>
 (D) Close elements properly: Close all HTML tags properly. Also, take care of the spaces in self-closing tags.
-Use
-<br />
-Instead of using
-<br/>
 (E) Write well-markup HTML pages: To ensure your page validation, use W3C Validator for the purpose.
 
 
 Reference:- 
-1. https://wpcrib.com/wordpress-coding-standards/
-2. https://make.wordpress.org/core/handbook/best-practices/coding-standards/html/
-3. https://www.hongkiat.com/blog/wordpress-coding-standard/
+[https://wpcrib.com/wordpress-coding-standards/](Wordpress.md)
+[https://make.wordpress.org/core/handbook/best-practices/coding-standards/html/](Wordpress.md)
+[https://www.hongkiat.com/blog/wordpress-coding-standard/](Wordpress.md)
