@@ -1,4 +1,4 @@
-Coding Standard Rules For Solidity.
+##Coding Standard Rules For Solidity.
 
 1 - can't commit to version control any piece of code which doesn't match some rules
 2 - No more than one statement per line.
