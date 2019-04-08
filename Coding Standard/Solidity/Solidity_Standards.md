@@ -76,18 +76,18 @@ Import statements should always be placed at the top of the file.
 ## Order of Layout
  - Layout contract elements in the following order:
 
-	Pragma statements
-	Import statements
-	Interfaces
-	Libraries
-	Contracts
+	- Pragma statements
+	- Import statements
+	- Interfaces
+	- Libraries
+	- Contracts
 
  - Inside each contract, library or interface, use the following order:
 
-	Type declarations
-	State variables
-	Events
-        Functions
+	- Type declarations
+	- State variables
+	- Events
+        - Functions
 
 
 ## Naming Styles
