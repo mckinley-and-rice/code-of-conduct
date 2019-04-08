@@ -73,3 +73,74 @@ background: #FFFFFF;
 
 (4) Best practices: Remove the old code structure before you attempt to add new for solving a problem.
 
+#### JavaScript coding standard in WordPress
+
+JavaScript has become a critical component in developing WordPress-based applications (themes and plugins) as well as WordPress core. Standards are needed for formatting and styling JavaScript code to maintain the same code consistency as the WordPress standards provide for core PHP, HTML, and CSS code.
+
+The WordPress JavaScript Coding Standards are adapted from the jQuery JavaScript Style Guide. Our standard differs from the jQuery guidelines in the following ways:
+
+WordPress uses single quotation marks for string declarations.
+Case statements are indented within switch blocks.
+Function contents are consistently indented, including full-file closure wrappers.
+Some whitespace rules differ, for consistency with the WordPress PHP coding standards.
+jQuery’s 100-character hard line limit is encouraged, but not strictly enforced.
+Many of the examples below have been adapted directly from the jQuery style guide; these differences have all been integrated into the examples on this page. Any of the below standards and examples should be considered best practice for WordPress code, unless explicitly noted as anti-patterns.
+
+ ##### Spacing
+Use spaces liberally throughout your code. “When in doubt, space it out.”
+
+These rules encourage liberal spacing for improved developer readability. The minification process creates a file that is optimized for browsers to read and process.
+
+Indentation with tabs.
+No whitespace at the end of line or on blank lines.
+Lines should usually be no longer than 80 characters, and should not exceed 100 (counting tabs as 4 spaces). This is a “soft” rule, but long lines generally indicate unreadable or disorganized code.
+if/else/for/while/try blocks should always use braces, and always go on multiple lines.
+Unary special-character operators (e.g., ++, --) must not have space next to their operand.
+Any , and ; must not have preceding space.
+Any ; used as a statement terminator must be at the end of the line.
+Any : after a property name in an object definition must not have preceding space.
+The ? and : in a ternary conditional must have space on both sides.
+No filler spaces in empty constructs (e.g., {}, [], fn()).
+There should be a new line at the end of each file.
+Any ! negation operator should have a following space.*
+All function bodies are indented by one tab, even if the entire file is wrapped in a closure.*
+Spaces may align code within documentation blocks or within a line, but only tabs should be used at the start of a line.*
+*: The WordPress JavaScript standards prefer slightly broader whitespace rules than the jQuery style guide. These deviations are for consistency between the PHP and JavaScript files in the WordPress codebase.
+
+Whitespace can easily accumulate at the end of a line – avoid this, as trailing whitespace is caught as an error in JSHint. One way to catch whitespace buildup is enabling visible whitespace characters within your text editor.
+
+Objects #Objects
+Object declarations can be made on a single line if they are short (remember the line length guidelines). When an object declaration is too long to fit on one line, there must be one property per line. Property names only need to be quoted if they are reserved words or contain special characters:
+
+Objects and arrays can be declared on a single line if they are short (remember the line length guidelines). When an object or array is too long to fit on one line, each member must be placed on its own line and each line ended by a comma.
+
+<script\>
+
+// Preferred
+var obj = {
+    ready: 9,
+    when: 4,
+    'you are': 15,
+};
+var arr = [
+    9,
+    4,
+    15,
+];
+
+ </script\>
+
+<script\>
+
+// Acceptable for small objects and arrays
+var obj = { ready: 9, when: 4, 'you are': 15 };
+var arr = [ 9, 4, 15 ];
+  
+// Bad
+var obj = { ready: 9,
+    when: 4, 'you are': 15 };
+var arr = [ 9,
+    4, 15 ];
+
+    </script\>
+
