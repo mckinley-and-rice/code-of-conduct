@@ -681,6 +681,7 @@ Never use jQuery to iterate over raw data or vanilla JavaScript objects.
 
 Use single and double quotes when appropriate. If you’re not evaluating anything in the string, use single quotes. You should almost never have to escape quotes in a string, because you can just alternate your quoting style, like so:
 
+```php
 
     <?php
 
@@ -698,6 +699,7 @@ Your indentation should always reflect logical structure. Use real tabs and not 
 
 Exception: if you have a block of code that would be more readable if things are aligned, use spaces:
 
+```php
 
     <?php
 
@@ -711,6 +713,7 @@ Exception: if you have a block of code that would be more readable if things are
 
 For associative arrays, each item should start on a new line when the array contains more than one item:
 
+```php
 
     <?php
 
@@ -728,6 +731,7 @@ $query = new WP_Query( $args );
 
 Note the comma after the last array item: this is recommended because it makes it easier to change the order of the array, and makes for cleaner diffs when new items are added.
 
+```php
 
     <?php
 
@@ -743,6 +747,7 @@ $my_array = array(
 
 For switch structures case should indent one tab from the switch statement and break one tab from the case statement.
 
+```php
 
     <?php
 
@@ -764,6 +769,7 @@ Rule of thumb: Tabs should be used at the beginning of the line for indentation,
 
 Braces shall be used for all blocks in the style shown here:
 
+```php
 
     <?php
 
@@ -783,6 +789,7 @@ If you have a really long block, consider whether it can be broken into two or m
 
 Braces should always be used, even when they are not required:
 
+```php
 
     <?php
 
@@ -805,7 +812,7 @@ foreach ( $items as $item ) {
 
 Note that requiring the use of braces just means that single-statement inline control structures are prohibited. You are free to use the alternative syntax for control structures (e.g. if/endif, while/endwhile)—especially in your templates where PHP code is embedded within HTML, for instance:
 
-
+```php
   
 
 <?php if ( have_posts() ) : ?>
