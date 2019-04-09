@@ -673,5 +673,9 @@ $tabs.each( function( index, element ) {
 
 Never use jQuery to iterate over raw data or vanilla JavaScript objects.
 
-
+ ```php
+    <?php
+        echo "test";
+    ?>
+    ```
 
