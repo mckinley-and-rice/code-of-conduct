@@ -28,11 +28,6 @@ Coding standards for languages used in WordPress :-
 (E) Write well-markup HTML pages: To ensure your page validation, use W3C Validator for the purpose.
 
 
-Reference:- 
-[https://wpcrib.com/wordpress-coding-standards/](https://wpcrib.com/wordpress-coding-standards/)
-[https://make.wordpress.org/core/handbook/best-practices/coding-standards/html/](https://make.wordpress.org/core/handbook/best-practices/coding-standards/html/)
-[https://www.hongkiat.com/blog/wordpress-coding-standard/](https://www.hongkiat.com/blog/wordpress-coding-standard/)
-
 
 
 #### 2. WordPress CSS Coding Standards.
@@ -166,7 +161,7 @@ firstArrayElement = arr[ 0 ];
 
 </script\>
 
-#####Examples of Good Spacing #Examples of Good Spacing
+#### Examples of Good Spacing #Examples of Good Spacing
 
 <script\>
 
@@ -205,7 +200,7 @@ try {
 
 
 
-#####Indentation and Line Breaks
+#### Indentation and Line Breaks
 
 Indentation and line breaks add readability to complex statements.
 
@@ -223,7 +218,7 @@ Tabs should be used for indentation. Even if the entire file is contained in a c
 
 </script\>
 
-#####Blocks and Curly Braces
+#### Blocks and Curly Braces
 
 if, else, for, while, and try blocks should always use braces, and always go on multiple lines. The opening brace should be on the same line as the function definition, the conditional, or the loop. The closing brace should be on the line directly following the last statement of the block.
 
@@ -242,7 +237,7 @@ if ( myFunction() ) {
 </script\>
 
 
-#####Multi-line Statements
+#### Multi-line Statements
 When a statement is too long to fit on one line, line breaks must occur after an operator.
 
 <script\>
@@ -286,7 +281,7 @@ if (
 
 </script\>
 
-#####Chained Method Calls
+#### Chained Method Calls
 
 When a chain of method calls is too long to fit on one line, there must be one call per line, with the first call on a separate line from the object the methods are called on. If the method changes the context, an extra level of indentation must be used.
 
@@ -301,7 +296,7 @@ elements
 
 </script\>
 
-#####Assignments and Globals
+#### Assignments and Globals
 
 
 Declaring Variables with const and let #Declaring Variables with const and let
@@ -331,7 +326,7 @@ var c;
 
 </script\>
 
-#####Globals
+#### Globals
 
 In the past, WordPress core made heavier use of global variables. Since core JavaScript files are sometimes used within plugins, existing globals should not be removed.
 
@@ -370,13 +365,13 @@ window.wp = window.wp || {};
 
 </script\>
 
-#####Naming Conventions
+#### Naming Conventions
 
 Variable and function names should be full words, using camel case with a lowercase first letter. This is an area where this standard differs from the WordPress PHP coding standards.
 
 Names should be descriptive, but not excessively so. Exceptions are allowed for iterators, such as the use of i to represent the index in a loop.
 
-####Abbreviations and Acronyms
+### Abbreviations and Acronyms
 
 Acronyms must be written with each of its composing letters capitalized. This is intended to reflect that each letter of the acronym is a proper word in its expanded form.
 
@@ -427,14 +422,14 @@ All @wordpress/element Components, including stateless function components, shou
 
 
 
-#####Constants
+#### Constants
 
 An exception to camel case is made for constant values which are never intended to be reassigned or mutated. Such variables must use the SCREAMING_SNAKE_CASE convention.
 
 In almost all cases, a constant should be defined in the top-most scope of a file. It is important to note that JavaScript’s const assignment is conceptually more limited than what is implied here, where a value assigned by const in JavaScript can in-fact be mutated, and is only protected against reassignment. A constant as defined in these coding guidelines applies only to values which are expected to never change, and is a strategy for developers to communicate intent moreso than it is a technical restriction.
 
 
-####Comments
+### Comments
 
 Comments come before the code to which they refer, and should always be preceded by a blank line. Capitalize the first letter of the comment, and include a period at the end when writing full sentences. There must be a single space between the comment token (//) and the comment text.
 
@@ -463,12 +458,12 @@ function foo( types, selector, data, fn, /* INTERNAL */ one ) {
 
 </script\>
 
-####Equality
+### Equality
 
 Strict equality checks (===) must be used in favor of abstract equality checks (==).
 
 
-#####Type Checks
+#### Type Checks
 
 These are the preferred ways of checking the type of an object:
 
@@ -491,7 +486,7 @@ Any of the above: _.isUndefined( object )
 Anywhere Backbone or Underscore are already used, you are encouraged to use Underscore.js‘s type checking methods over jQuery’s.
 
 
-#####Strings
+#### Strings
 
 Use single-quotes for string literals:
 
@@ -503,7 +498,7 @@ When a string contains single quotes, they need to be escaped with a backslash (
 // Escape single quotes within strings:
 'Note the backslash before the \'single quotes\'';
 
-#####Switch Statements
+#### Switch Statements
 
 The usage of switch statements is generally discouraged, but can be useful when there are a large number of cases – especially when multiple cases can be handled by the same block, or fall-through logic (the default case) can be leveraged.
 
@@ -673,6 +668,13 @@ $tabs.each( function( index, element ) {
 
 Never use jQuery to iterate over raw data or vanilla JavaScript objects.
 
+
+
+
+
+
+
+ 
 ## PHP coding standard in Wordpress
 
 
@@ -693,7 +695,7 @@ echo "<a href='$link' title='$linktitle'>$linkname</a>";
 Text that goes into attributes should be run through esc_attr() so that single or double quotes do not end the attribute value and invalidate the HTML and cause a security issue.
 
 
-#### Indentation
+### Indentation
 
 Your indentation should always reflect logical structure. Use real tabs and not spaces, as this allows the most flexibility across clients.
 
@@ -765,7 +767,7 @@ switch ( $type ) {
 
 Rule of thumb: Tabs should be used at the beginning of the line for indentation, while spaces can be used mid-line for alignment.
 
-#### Brace Style
+### Brace Style
 
 Braces shall be used for all blocks in the style shown here:
 
@@ -826,13 +828,24 @@ Note that requiring the use of braces just means that single-statement inline co
 <?php endif; ?>
 
 
-#### Use elseif, not else if
+
+
+
+
+
+
+
+
+
+
+
+###  Use elseif, not else if
 
 else if is not compatible with the colon syntax for if|elseif blocks. For this reason, use elseif for conditionals.
 
 
 
-####Multiline Function Calls
+### Multiline Function Calls
 
 When splitting a function call over multiple lines, each parameter must be on a seperate line. Single line inline comments can take up their own line.
 
@@ -861,14 +874,14 @@ $a = foo(
 
 ?>
 
-####Regular Expressions
+### Regular Expressions
 
 Perl compatible regular expressions (PCRE, preg_ functions) should be used in preference to their POSIX counterparts. Never use the /e switch, use preg_replace_callback instead.
 
 It’s most convenient to use single-quoted strings for regular expressions since, contrary to double-quoted strings, they have only two metasequences: \' and \\.
 
 
-####Opening and Closing PHP Tags
+### Opening and Closing PHP Tags
 
 When embedding multi-line PHP snippets within a HTML block, the PHP open and close tags must be on a line by themselves.
 
@@ -907,7 +920,7 @@ if ( $a === $b ) { ?>
 
 ?>
 
-####No Shorthand PHP Tags
+### No Shorthand PHP Tags
 
 Important: Never use shorthand PHP start tags. Always use full PHP tags.
 
@@ -928,12 +941,12 @@ Incorrect:
 <?= $var ?>
 
 
-####Remove Trailing Spaces
+### Remove Trailing Spaces
 
 Remove trailing whitespace at the end of each line of code. Omitting the closing PHP tag at the end of a file is preferred. If you use the tag, make sure you remove trailing whitespace.
 
 
-####Space Usage
+### Space Usage
 
 Always put spaces after commas, and on both sides of logical, comparison, string and assignment operators.
 
@@ -1057,7 +1070,7 @@ my_function( ( $x - 1 ) * 5, $y );
 
 ?>
 
-####Formatting SQL statements
+### Formatting SQL statements
 
 When formatting SQL statements you may break it into several lines and indent if it is sufficiently complex to warrant it. Most statements work well as one line though. Always capitalize the SQL parts of the statement like UPDATE or WHERE.
 
@@ -1082,14 +1095,14 @@ $wpdb->query( $wpdb->prepare( "UPDATE $wpdb->posts SET post_title = %s WHERE ID 
 
 See Data Validation in the Codex for more information.
 
-###Database Queries
+### Database Queries
 
 Avoid touching the database directly. If there is a defined function that can get the data you need, use it. Database abstraction (using functions instead of queries) helps keep your code forward-compatible and, in cases where results are cached in memory, it can be many times faster.
 
 If you must touch the database, get in touch with some developers by posting a message to the wp-hackers mailing list. They may want to consider creating a function for the next WordPress version to cover the functionality you wanted.
 
 
-####Naming Conventions
+### Naming Conventions
 
 Use lowercase letters in variable, action/filter, and function names (never camelCase). Separate words via underscores. Don’t abbreviate variable names unnecessarily; let the code be unambiguous and self-documenting.
 
@@ -1137,7 +1150,7 @@ Files containing template tags in wp-includes should have -template appended to 
 
 general-template.php
 
-####Self-Explanatory Flag Values for Function Arguments
+### Self-Explanatory Flag Values for Function Arguments
 
 Prefer string values to just true and false when calling functions.
 
@@ -1187,7 +1200,7 @@ eat ( 'noodles', array( 'speed' => 'moderate' ) );
 
 ?>
 
-####Interpolation for Naming Dynamic Hooks
+### Interpolation for Naming Dynamic Hooks
 
 Dynamic hooks should be named using interpolation rather than concatenation for readability and discoverability purposes.
 
@@ -1218,7 +1231,7 @@ do_action( "{$new_status}_{$post->post_type}", $post->ID, $post );
 Where possible, dynamic values in tag names should also be as succinct and to the point as possible. $user_id is much more self-documenting than, say, $this->id.
 
 
-####Ternary Operator
+### Ternary Operator
 
 Ternary operators are fine, but always have them test if the statement is true, not false. Otherwise, it just gets confusing. (An exception would be using ! empty(), as testing for false here is generally more intuitive.)
 
@@ -1235,7 +1248,7 @@ $musictype = ( 'jazz' === $music ) ? 'cool' : 'blah';
 ?>
 
 
-####Yoda Conditions
+### Yoda Conditions
 
 ```php
 
@@ -1256,7 +1269,7 @@ A little bizarre, it is, to read. Get used to it, you will.
 This applies to ==, !=, ===, and !==. Yoda conditions for <, >, <=, or >= are significantly more difficult to read and are best avoided.
 
 
-####Clever Code
+### Clever Code
 
 In general, readability is more important than cleverness or brevity.
 
@@ -1354,5 +1367,11 @@ switch ( $foo ) {
 The goto statement must never be used.
 
 The eval() construct is very dangerous, and is impossible to secure. Additionally, the create_function() function, which internally performs an eval(), is deprecated in PHP 7.2. Both of these must not be used.
+
+Reference:- 
+[https://wpcrib.com/wordpress-coding-standards/](https://wpcrib.com/wordpress-coding-standards/)
+[https://make.wordpress.org/core/handbook/best-practices/coding-standards/html/](https://make.wordpress.org/core/handbook/best-practices/coding-standards/html/)
+[https://www.hongkiat.com/blog/wordpress-coding-standard/](https://www.hongkiat.com/blog/wordpress-coding-standard/)
+
 
 
