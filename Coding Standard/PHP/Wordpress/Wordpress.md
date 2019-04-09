@@ -673,9 +673,149 @@ $tabs.each( function( index, element ) {
 
 Never use jQuery to iterate over raw data or vanilla JavaScript objects.
 
- ```php
+## PHP coding standard in Wordpress
+
+
+
+### Single and Double Quotes
+
+Use single and double quotes when appropriate. If you’re not evaluating anything in the string, use single quotes. You should almost never have to escape quotes in a string, because you can just alternate your quoting style, like so:
+
+```php
     <?php
-        echo "test";
-    ?>
-   
+
+echo '<a href="/static/link" title="Yeah yeah!">Link name</a>';
+echo "<a href='$link' title='$linktitle'>$linkname</a>";
+
+ ?>
+
+Text that goes into attributes should be run through esc_attr() so that single or double quotes do not end the attribute value and invalidate the HTML and cause a security issue.
+
+
+#### Indentation
+
+Your indentation should always reflect logical structure. Use real tabs and not spaces, as this allows the most flexibility across clients.
+
+Exception: if you have a block of code that would be more readable if things are aligned, use spaces:
+
+```php
+    <?php
+
+
+[tab]$foo   = 'somevalue';
+[tab]$foo2  = 'somevalue2';
+[tab]$foo34 = 'somevalue3';
+[tab]$foo5  = 'somevalue4';
+
+?>
+
+For associative arrays, each item should start on a new line when the array contains more than one item:
+
+```php
+    <?php
+
+$query = new WP_Query( array( 'ID' => 123 ) );
+
+$args = array( 
+[tab]'post_type'   => 'page',
+[tab]'post_author' => 123,
+[tab]'post_status' => 'publish',
+);
+ 
+$query = new WP_Query( $args );
+
+?>
+
+Note the comma after the last array item: this is recommended because it makes it easier to change the order of the array, and makes for cleaner diffs when new items are added.
+
+```php
+    <?php
+
+
+$my_array = array(
+[tab]'foo'   => 'somevalue',
+[tab]'foo2'  => 'somevalue2',
+[tab]'foo3'  => 'somevalue3',
+[tab]'foo34' => 'somevalue3',
+);
+
+?>
+
+For switch structures case should indent one tab from the switch statement and break one tab from the case statement.
+
+```php
+    <?php
+
+
+switch ( $type ) {
+[tab]case 'foo':
+[tab][tab]some_function();
+[tab][tab]break;
+[tab]case 'bar':
+[tab][tab]some_function();
+[tab][tab]break;
+}
+
+?>
+
+Rule of thumb: Tabs should be used at the beginning of the line for indentation, while spaces can be used mid-line for alignment.
+
+#### Brace Style
+
+Braces shall be used for all blocks in the style shown here:
+
+```php
+    <?php
+
+if ( condition ) {
+    action1();
+    action2();
+} elseif ( condition2 && condition3 ) {
+    action3();
+    action4();
+} else {
+    defaultaction();
+}
+
+?>
+
+If you have a really long block, consider whether it can be broken into two or more shorter blocks, functions, or methods, to reduce complexity, improve ease of testing, and increase readability.
+
+Braces should always be used, even when they are not required:
+
+```php
+    <?php
+
+if ( condition ) {
+    action0();
+}
+ 
+if ( condition ) {
+    action1();
+} elseif ( condition2 ) {
+    action2a();
+    action2b();
+}
+ 
+foreach ( $items as $item ) {
+    process_item( $item );
+}
+
+?>
+
+Note that requiring the use of braces just means that single-statement inline control structures are prohibited. You are free to use the alternative syntax for control structures (e.g. if/endif, while/endwhile)—especially in your templates where PHP code is embedded within HTML, for instance:
+
+```php
+  
+
+<?php if ( have_posts() ) : ?>
+    <div class="hfeed">
+        <?php while ( have_posts() ) : the_post(); ?>
+            <article id="post-<?php the_ID() ?>" class="<?php post_class() ?>">
+                <!-- ... -->
+            </article>
+        <?php endwhile; ?>
+    </div>
+<?php endif; ?>
+
 
