@@ -6,13 +6,13 @@ A guide to writing __clean__, __modular__, __semantic__ and __maintainable__ web
 
 ## Table of Contents
 
-- [Mckinley & Rice HTML5 Style Guide](#mckinley--rice-html5-style-guide)
+1 [Mckinley & Rice HTML5 Style Guide](#mckinley--rice-html5-style-guide)
   - [Table of Contents](#table-of-contents)
-- [Why follow an HTML style guide](#why-follow-an-html-style-guide)
-- [Clean HTML](#clean-html)
-- [Modular HTML](#modular-html)
-- [Semantic HTML](#semantic-html)
-- [Maintainable HTML](#maintainable-html)
+2 [Why follow an HTML style guide](#why-follow-an-html-style-guide)
+3 [Clean HTML](#clean-html)
+4 [Modular HTML](#modular-html)
+5 [Semantic HTML](#semantic-html)
+6 [Maintainable HTML](#maintainable-html)
 
 # Why follow an HTML style guide
 
