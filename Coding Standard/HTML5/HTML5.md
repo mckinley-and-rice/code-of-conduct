@@ -4,13 +4,15 @@ A guide to writing __clean__, __modular__, __semantic__ and __maintainable__ web
 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 
-## Table of contents
+## Table of Contents
 
-1. [Why follow an HTML style guide? ]()
-2. [Clean HTML]()
-3. [Modular HTML]()
-4. [Semantic HTML ]()
-5. [Maintainable HTML]()
+- [Mckinley & Rice HTML5 Style Guide](#mckinley--rice-html5-style-guide)
+  - [Table of Contents](#table-of-contents)
+- [Why follow an HTML style guide](#why-follow-an-html-style-guide)
+- [Clean HTML](#clean-html)
+- [Modular HTML](#modular-html)
+- [Semantic HTML](#semantic-html)
+- [Maintainable HTML](#maintainable-html)
 
 # Why follow an HTML style guide
 
@@ -21,3 +23,8 @@ In software development teams (like ours), multiple people work on the same code
 - Unsemantic tags leading to poor SEO optimization and faulty device specific rendering
 - Inconsistent way of referencing tag hierarchy leading to dificulty in referencing 
 - Unstructured and ugly CSS due to unstructured and ugly markup
+
+# Clean HTML
+# Modular HTML
+# Semantic HTML
+# Maintainable HTML
