@@ -1,3 +1,7 @@
+
+Please 
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
+
 - [🐍 Coding Standards](#%F0%9F%90%8D-coding-standards)
   - [Documentation](#documentation)
   - [Testing](#testing)
