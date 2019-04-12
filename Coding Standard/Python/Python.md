@@ -1,7 +1,3 @@
-dd# 🐍 Coding Standards
-
-This is not "final". **Pull requests welcome** to evolve it over time.
-
 - [🐍 Coding Standards](#%F0%9F%90%8D-coding-standards)
   - [Documentation](#documentation)
   - [Testing](#testing)
