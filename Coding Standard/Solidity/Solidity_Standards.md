@@ -1,8 +1,8 @@
-# Solidity Cheatsheet and Best practices
+# Solidity Best practices
 
 ## Motivation
 
-This document is a cheatsheet for **Solidity** that you can use to write **Smart Contracts** for **Ethereum** based blockchain.
+This document is for **Solidity** that you can use to write **Smart Contracts** for **Ethereum** based blockchain.
 
 This guide is not intended to teach you Solidity from the ground up, but to help developers with basic knowledge who may struggle to get familiar with Smart Contracts and Blockchain because of the Solidity concepts used.
 
