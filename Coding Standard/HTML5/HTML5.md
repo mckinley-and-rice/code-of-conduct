@@ -34,7 +34,7 @@ A guide to writing __clean__, __modular__, __semantic__ and __maintainable__ web
     - [Use comments](#use-comments)
     - [Use understandable names for classes and IDs](#use-understandable-names-for-classes-and-ids)
     - [Link CSS at the top of `<head>` tag](#link-css-at-the-top-of-head-tag)
-    - [Link JS at the bottom of `<body>` tag](#link-js-at-the-bottom-of-body-tag)
+    - [Add JS code at the bottom of `<body>` tag](#add-js-code-at-the-bottom-of-body-tag)
 
 # Why follow an HTML style guide
 
@@ -311,6 +311,64 @@ Avoid using heavy image formats such as JPEG. These images load much slower and 
 - Using WEBP in HTML ➡️ [https://css-tricks.com/using-webp-images/](https://css-tricks.com/using-webp-images/)
 
 ### Use comments
+
+An HTML comment begins with `<!––` and the comment closes with `––>`. HTML comments are visible to anyone that views the page source code, but are not rendered when the HTML document is rendered by a browser. Comments can help you and potential maintainers of your markup by resolving a few pain points:
+
+1. Describe what a part of markup does
+
+```html
+<!-- Displays the current article -->
+<article>
+  <header>
+    <h1>What Does WWF Do?</h1>
+    <p>WWF's mission:</p>
+  </header>
+  <p>WWF's mission is to stop the degradation of our planet's natural environment,
+  and build a future in which humans live in harmony with nature.</p>
+</article>
+```
+
+2. Maintain clear sections
+
+```html
+<!-- FOOTER -->
+<footer>
+  <p>Posted by: Hege Refsnes</p>
+  <p>Contact information: <a href="mailto:someone@example.com">
+  someone@example.com</a>.</p>
+</footer>
+```
+
+1. Debug by removing tags to check for bugs
+
+```html
+<!-- <img src="https://image.com/image.png"/> -->
+<p>Image<p>
+```
+
+
 ### Use understandable names for classes and IDs
+
+Class and ID names are heavily linked with styling using CSS and scripting using JS. If you give your IDs and classes absurd, non-sensical or unrelated names you make it 2x harder for 
+- CSS developers to style the document because they are unable to understand cascading styles
+- JS developers to debug interactivity because ther are  unable to understand how which class or ID behaves
+
+Good
+```html
+<div class="button" id="nav-button">
+  <button>Press Me!</button>
+</div>
+```
+
+Bad
+```html
+<div class="myname123" id="random">
+  <button>Press Me!</button>
+</div>
+```
+
 ### Link CSS at the top of `<head>` tag
-### Link JS at the bottom of `<body>` tag
+This ensures that page styles are loaded before any content and external resource which can load asynchronously.
+
+### Add JS code at the bottom of `<body>` tag
+This ensure that the page is loaded faster and the browser does not wait for the scripts to load and execute to give a "ready" trigger.
