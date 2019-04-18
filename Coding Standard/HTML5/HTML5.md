@@ -143,7 +143,7 @@ Very Bad
 <h1>WEBSITE.COM</h1>
     </div>
 ```
-__NOTE__: If you are using Visual Studio Code, use extensions like Prettier. These extensions auto format your markup.
+__NOTE__: If you are using Visual Studio Code, use extensions like [Prettier](https://prettier.io/). These extensions auto format your markup.
 
 ### Avoid long lines
 Good
