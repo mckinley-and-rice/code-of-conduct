@@ -18,6 +18,7 @@ A guide to writing __clean__, __modular__, __semantic__ and __maintainable__ web
     - [Indent your tags (PLEASE)](#indent-your-tags-please)
     - [Avoid long lines](#avoid-long-lines)
   - [Semantic HTML](#semantic-html)
+    - [What is semantic markup](#what-is-semantic-markup)
     - [`<section>`](#section)
     - [`<article>`](#article)
     - [`<header>`](#header)
@@ -25,7 +26,16 @@ A guide to writing __clean__, __modular__, __semantic__ and __maintainable__ web
     - [`<nav>`](#nav)
     - [`<aside>`](#aside)
     - [`<figure>` & `<figcaption>`](#figure--figcaption)
+    - [Why use semantic tags](#why-use-semantic-tags)
   - [Maintainable HTML](#maintainable-html)
+    - [What is maintainable HTML](#what-is-maintainable-html)
+    - [Structure projects carefully](#structure-projects-carefully)
+    - [Include all necessary pages](#include-all-necessary-pages)
+    - [Store images in web-friendly formats](#store-images-in-web-friendly-formats)
+    - [Use comments](#use-comments)
+    - [Use understandable names for classes and IDs](#use-understandable-names-for-classes-and-ids)
+    - [Link CSS at the top of `<head>` tag](#link-css-at-the-top-of-head-tag)
+    - [Link JS at the bottom of `<body>` tag](#link-js-at-the-bottom-of-body-tag)
 
 # Why follow an HTML style guide
 
@@ -156,7 +166,7 @@ Bad
   </div>
 ```
 ## Semantic HTML
-
+### What is semantic markup 
 The purpose of most web pages is to convey a message. This message can not be conveyed if the page is not getting enough attention by sub-optimal search engine optimization. This is where Semantic HTML comes in to the picture.
 
 > Semantic
@@ -238,6 +248,24 @@ Defines a figure and its caption
 </figure>
 ```
 
+### Why use semantic tags
+With HTML4, developers used their own id/class names to style elements: header, top, bottom, footer, menu, navigation, main, container, content, article, sidebar, topnav, etc. This made it impossible for search engines to identify the correct web page content. With the semantic HTML5 elements (`<header>`, `<footer>`, `<nav>`, `<section>`, `<article>`), this will become easier.
 
+> According to the W3C, a Semantic Web: "Allows data to be shared and reused across applications, enterprises, and communities."
 
 ## Maintainable HTML
+
+### What is maintainable HTML
+We rarely find software or service that never requires updating, moving or converting. These tasks are usually carried out by human beings and they often have to work with things built by other human beings. If the person who worked previously writes markup lacking in quality, organizational structure and uniformity, it leads to difficulty in maintainance, unnecessary delays and potentially, loss of money and business.
+
+All of this can be avoided if we simply follow a set of guidleines and also constantly maintain said guidelines. This leads to predictibility and overall developer happiness while maintaining and updating web markup authored by someone else.
+
+Keep the following points handly while working with HTML projects to optimize maintainability.
+
+### Structure projects carefully
+### Include all necessary pages
+### Store images in web-friendly formats
+### Use comments
+### Use understandable names for classes and IDs
+### Link CSS at the top of `<head>` tag
+### Link JS at the bottom of `<body>` tag
