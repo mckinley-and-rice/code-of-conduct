@@ -12,14 +12,19 @@ A guide to writing __clean__, __modular__, __semantic__ and __maintainable__ web
   - [Clean HTML](#clean-html)
     - [Use lower-case element names](#use-lower-case-element-names)
     - [Close all HTML tags](#close-all-html-tags)
-    - [Close all HTML tags](#close-all-html-tags-1)
     - [Close empty HTML tags](#close-empty-html-tags)
     - [Use lowercase attribute names](#use-lowercase-attribute-names)
     - [Enclose attribute values in quotes](#enclose-attribute-values-in-quotes)
     - [Indent your tags (PLEASE)](#indent-your-tags-please)
     - [Avoid long lines](#avoid-long-lines)
-  - [Modular HTML](#modular-html)
   - [Semantic HTML](#semantic-html)
+    - [`<section>`](#section)
+    - [`<article>`](#article)
+    - [`<header>`](#header)
+    - [`<footer>`](#footer)
+    - [`<nav>`](#nav)
+    - [`<aside>`](#aside)
+    - [`<figure>` & `<figcaption>`](#figure--figcaption)
   - [Maintainable HTML](#maintainable-html)
 
 # Why follow an HTML style guide
@@ -56,17 +61,6 @@ Very Bad
 <div>
   <P>Hello World</p>
 </DIV>
-```
-
-### Close all HTML tags
-Good
-```html
-  <p>Hello World</p>
-```
-
-Bad
-```html
-<p>Hello World
 ```
 
 ### Close all HTML tags
@@ -161,6 +155,89 @@ Bad
     ...
   </div>
 ```
-## Modular HTML
 ## Semantic HTML
+
+The purpose of most web pages is to convey a message. This message can not be conveyed if the page is not getting enough attention by sub-optimal search engine optimization. This is where Semantic HTML comes in to the picture.
+
+> Semantic
+> relating to meaning in language or logic.
+
+Semantic HTML extends the core functionality of web markup. It allows the author to covey the _meaning_ of certain parts rather than just the _presentation_. HTML5.2 standard has introduced certain tags that tell what parts of markup are doing and how they should affect the indexing of a web page based on a query. You should use these tags in conjunction with presentational tags to achieve the mot out of a web page. These tags are:
+
+### `<section>`
+Defines a section in the document 
+```html
+<section>
+  <h1>WWF</h1>
+  <p>The World Wide Fund for Nature (WWF) is....</p>
+</section>
+```
+
+### `<article>`
+Defines independent self contained content
+```html
+<article>
+  <h1>What Does WWF Do?</h1>
+  <p>WWF's mission is to stop the degradation of our planet's natural environment,
+  and build a future in which humans live in harmony with nature.</p>
+</article>
+```
+
+### `<header>`
+Defines the header section of the document
+```html
+<article>
+  <header>
+    <h1>What Does WWF Do?</h1>
+    <p>WWF's mission:</p>
+  </header>
+  <p>WWF's mission is to stop the degradation of our planet's natural environment,
+  and build a future in which humans live in harmony with nature.</p>
+</article>
+```
+
+### `<footer>`
+Defines the footer section of the document
+```html
+<footer>
+  <p>Posted by: Hege Refsnes</p>
+  <p>Contact information: <a href="mailto:someone@example.com">
+  someone@example.com</a>.</p>
+</footer>
+```
+
+### `<nav>`
+Defines a set of navigation links
+```html
+<nav>
+  <a href="/html/">HTML</a> |
+  <a href="/css/">CSS</a> |
+  <a href="/js/">JavaScript</a> |
+  <a href="/jquery/">jQuery</a>
+</nav>
+```
+
+### `<aside>`
+Defines some content aside from the content it is placed in (like a sidebar).
+```html
+<p>My family and I visited The Epcot center this summer.</p>
+
+<aside>
+  <h4>Epcot Center</h4>
+  <p>The Epcot Center is a theme park in Disney World, Florida.</p>
+</aside>
+```
+
+
+### `<figure>` & `<figcaption>`
+Defines a figure and its caption
+```html
+<figure>
+  <img src="pic_trulli.jpg" alt="Trulli">
+  <figcaption>Fig1. - Trulli, Puglia, Italy.</figcaption>
+</figure>
+```
+
+
+
 ## Maintainable HTML
