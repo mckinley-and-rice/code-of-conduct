@@ -30,7 +30,6 @@ A guide to writing __clean__, __modular__, __semantic__ and __maintainable__ web
   - [Maintainable HTML](#maintainable-html)
     - [What is maintainable HTML](#what-is-maintainable-html)
     - [Structure projects carefully](#structure-projects-carefully)
-    - [Include all necessary pages](#include-all-necessary-pages)
     - [Store images in web-friendly formats](#store-images-in-web-friendly-formats)
     - [Use comments](#use-comments)
     - [Use understandable names for classes and IDs](#use-understandable-names-for-classes-and-ids)
@@ -263,8 +262,54 @@ All of this can be avoided if we simply follow a set of guidleines and also cons
 Keep the following points handly while working with HTML projects to optimize maintainability.
 
 ### Structure projects carefully
-### Include all necessary pages
+Keep separate directories for HTML pages, assets, images, CSS and JS to make it easier for other developers to access your markup
+
+Good
+```
+ProjectName
+  |-assets
+    |-images
+      |-image1.svg
+      |-image2.png
+    |-stylesheets
+      |-main.css
+      |-header.css
+      |-article.css
+      |-footer.css
+    |-scripts
+      |-main.js
+  |-pages
+    |-page1
+      |-page1.html
+    |-page2
+      |-page2.html
+  |-index.html
+
+```
+
+Bad
+```
+ProjectName
+  |-image1.svg
+  |-image2.png
+  |-main.css
+  |-header.css
+  |-article.css
+  |-footer.css
+  |-main.js
+  |-page1.html
+  |-page2.html
+  |-index.html
+
+```
+
 ### Store images in web-friendly formats
+
+Avoid using heavy image formats such as JPEG. These images load much slower and cause poor performance and slower initial paint. Use more web-friendly formats such as WEBP and PNG. For vectors such as icons, use SVGs bacause the don't pixelate and are light-weight.
+
+Convert JPEG to WEBP ➡️ [https://image.online-convert.com/convert-to-webp](https://image.online-convert.com/convert-to-webp)
+Using WEBP in HTML ➡️ [https://css-tricks.com/using-webp-images/](https://css-tricks.com/using-webp-images/)
+
 ### Use comments
 ### Use understandable names for classes and IDs
 ### Link CSS at the top of `<head>` tag
