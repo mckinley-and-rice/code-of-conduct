@@ -38,7 +38,7 @@ A guide to writing __clean__, __modular__, __semantic__ and __maintainable__ web
 
 # Why follow an HTML style guide
 
-In software development teams (like ours), multiple people work on the same codebase. Especially when it comes to web markup. We need a system to streamline the process of writing good HTML makrup so that we can avoid a lot of pitfalls that can arise due to inconsistent standards followed by different people. These pitfalls include:
+In software development teams (like ours), multiple people work on the same codebase. Especially when it comes to web markup. We need a system to streamline the process of writing good HTML markup so that we can avoid a lot of pitfalls that can arise due to inconsistent standards followed by different people. These pitfalls include:
 
 - Unstructured tags that lead to organizational problems and overall team frustration
 - Overriden class and id names leading to inconsitencies in CSS and unexpected bugs
@@ -153,7 +153,9 @@ Good
 ```html
   <div class="body">
     <p>
-      
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+      sed do eiusmod tempor incididunt ut labore et dolore magna 
+      aliqua.
     </p>
   </div>
 ```
@@ -161,14 +163,14 @@ Good
 Bad
 ```html
   <div class=header>
-    ...
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   </div>
 ```
 ## Semantic HTML
 ### What is semantic markup 
 The purpose of most web pages is to convey a message. This message can not be conveyed if the page is not getting enough attention by sub-optimal search engine optimization. This is where Semantic HTML comes in to the picture.
 
-> Semantic
+> __Semantic__:
 > relating to meaning in language or logic.
 
 Semantic HTML extends the core functionality of web markup. It allows the author to covey the _meaning_ of certain parts rather than just the _presentation_. HTML5.2 standard has introduced certain tags that tell what parts of markup are doing and how they should affect the indexing of a web page based on a query. You should use these tags in conjunction with presentational tags to achieve the mot out of a web page. These tags are:
@@ -305,7 +307,7 @@ ProjectName
 
 ### Store images in web-friendly formats
 
-Avoid using heavy image formats such as JPEG. These images load much slower and cause poor performance and slower initial paint. Use more web-friendly formats such as WEBP and PNG. For vectors such as icons, use SVGs bacause the don't pixelate and are light-weight.
+Avoid using heavy image formats such as JPEG. These images load much slower and cause poor performance and slower initial paint. Use more web-friendly formats such as WEBP and PNG. For vectors such as icons, use SVGs bacause they don't pixelate and are light-weight.
 
 - Convert JPEG to WEBP ➡️ [https://image.online-convert.com/convert-to-webp](https://image.online-convert.com/convert-to-webp)
 - Using WEBP in HTML ➡️ [https://css-tricks.com/using-webp-images/](https://css-tricks.com/using-webp-images/)
@@ -351,7 +353,7 @@ An HTML comment begins with `<!––` and the comment closes with `––>`. HT
 
 Class and ID names are heavily linked with styling using CSS and scripting using JS. If you give your IDs and classes absurd, non-sensical or unrelated names you make it 2x harder for 
 - CSS developers to style the document because they are unable to understand cascading styles
-- JS developers to debug interactivity because ther are  unable to understand how which class or ID behaves
+- JS developers to debug interactivity because they are  unable to understand how which class or ID behaves
 
 Good
 ```html
