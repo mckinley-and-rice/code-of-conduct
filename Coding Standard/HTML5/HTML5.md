@@ -10,6 +10,7 @@ A guide to writing __clean__, __modular__, __semantic__ and __maintainable__ web
   - [Table of Contents](#table-of-contents)
 - [Why follow an HTML style guide](#why-follow-an-html-style-guide)
   - [Clean HTML](#clean-html)
+    - [Use lower-case element names](#use-lower-case-element-names)
   - [Modular HTML](#modular-html)
   - [Semantic HTML](#semantic-html)
   - [Maintainable HTML](#maintainable-html)
@@ -25,6 +26,30 @@ In software development teams (like ours), multiple people work on the same code
 - Unstructured and ugly CSS due to unstructured and ugly markup
 
 ## Clean HTML
+
+Clean markup is a fundamental requirement in front end teams. Websites grow in size, complexity of structure and a list of dependencies. If your HTML5 code is not clean and organized, you are ensuring future frustration. Keep these points in mind while writing HTML5 code to ensure cleanliness. 
+
+### Use lower-case element names
+Good
+```html
+<div>
+  <p>Hello World</p>
+</div>
+```
+
+Bad
+```html
+<DIV>
+  <P>Hello World</P>
+</DIV>
+```
+
+Very Bad
+```html
+<div>
+  <P>Hello World</p>
+</DIV>
+```
 ## Modular HTML
 ## Semantic HTML
 ## Maintainable HTML
