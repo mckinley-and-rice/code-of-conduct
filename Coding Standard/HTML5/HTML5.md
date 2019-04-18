@@ -11,6 +11,13 @@ A guide to writing __clean__, __modular__, __semantic__ and __maintainable__ web
 - [Why follow an HTML style guide](#why-follow-an-html-style-guide)
   - [Clean HTML](#clean-html)
     - [Use lower-case element names](#use-lower-case-element-names)
+    - [Close all HTML tags](#close-all-html-tags)
+    - [Close all HTML tags](#close-all-html-tags-1)
+    - [Close empty HTML tags](#close-empty-html-tags)
+    - [Use lowercase attribute names](#use-lowercase-attribute-names)
+    - [Enclose attribute values in quotes](#enclose-attribute-values-in-quotes)
+    - [Indent your tags (PLEASE)](#indent-your-tags-please)
+    - [Avoid long lines](#avoid-long-lines)
   - [Modular HTML](#modular-html)
   - [Semantic HTML](#semantic-html)
   - [Maintainable HTML](#maintainable-html)
@@ -49,6 +56,110 @@ Very Bad
 <div>
   <P>Hello World</p>
 </DIV>
+```
+
+### Close all HTML tags
+Good
+```html
+  <p>Hello World</p>
+```
+
+Bad
+```html
+<p>Hello World
+```
+
+### Close all HTML tags
+Good
+```html
+  <p>Hello World</p>
+```
+
+Bad
+```html
+<p>Hello World
+```
+### Close empty HTML tags
+Good
+```html
+  <img src="https://image.com/image.png"/>
+```
+
+Bad
+```html
+<img src="https://image.com/image.png">
+```
+
+### Use lowercase attribute names
+Good
+```html
+  <div class="header">
+    ...
+  </div>
+```
+
+Bad
+```html
+  <div CLASS="header">
+    ...
+  </div>
+```
+
+### Enclose attribute values in quotes
+Good
+```html
+  <div class="header">
+    ...
+  </div>
+```
+
+Bad
+```html
+  <div class=header>
+    ...
+  </div>
+```
+
+### Indent your tags (PLEASE)
+Use one tab space for each level of markup
+
+Good
+```html
+  <div class="header">
+    <h1>WEBSITE.COM</h1>
+  </div>
+```
+
+Bad
+```html
+  <div CLASS="header">
+  <h1>WEBSITE.COM</h1>
+  </div>
+```
+
+Very Bad
+```html
+  <div CLASS="header">
+<h1>WEBSITE.COM</h1>
+    </div>
+```
+__NOTE__: If you are using Visual Studio Code, use extensions like Prettier. These extensions auto format your markup.
+
+### Avoid long lines
+Good
+```html
+  <div class="body">
+    <p>
+      
+    </p>
+  </div>
+```
+
+Bad
+```html
+  <div class=header>
+    ...
+  </div>
 ```
 ## Modular HTML
 ## Semantic HTML
