@@ -307,8 +307,8 @@ ProjectName
 
 Avoid using heavy image formats such as JPEG. These images load much slower and cause poor performance and slower initial paint. Use more web-friendly formats such as WEBP and PNG. For vectors such as icons, use SVGs bacause the don't pixelate and are light-weight.
 
-Convert JPEG to WEBP ➡️ [https://image.online-convert.com/convert-to-webp](https://image.online-convert.com/convert-to-webp)
-Using WEBP in HTML ➡️ [https://css-tricks.com/using-webp-images/](https://css-tricks.com/using-webp-images/)
+- Convert JPEG to WEBP ➡️ [https://image.online-convert.com/convert-to-webp](https://image.online-convert.com/convert-to-webp)
+- Using WEBP in HTML ➡️ [https://css-tricks.com/using-webp-images/](https://css-tricks.com/using-webp-images/)
 
 ### Use comments
 ### Use understandable names for classes and IDs
