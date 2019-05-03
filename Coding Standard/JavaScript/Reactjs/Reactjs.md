@@ -255,6 +255,21 @@ class extends React.Component {
 ```
 
 ## Directory Structure
+  All API call should be placed in componentDidMount instead of componentWillMount.
+  ```
+  //Bad
+  
+  componentWillMount(){
+    // API call
+  }
+  
+  
+  //Good
+  componentDidMount(){
+    // API call
+  }
+  ```
+## Directory Structure
 
 Follow the following directory structure in your React apps.
 
