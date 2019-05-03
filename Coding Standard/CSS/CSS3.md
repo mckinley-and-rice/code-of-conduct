@@ -54,3 +54,26 @@ __CSS__
 	color: #900;
 }
 ```
+
+## Benefits of using the BEM model
+
+### Independent styling
+
+Block styles are independent of any other elements on the page which eleiminates all the problems that arise due to cascading.
+
+### Shallowness
+
+BEM models makes selectors highly specific and lack any sort of depth, leading to fearless modification.
+
+### Reusability 
+
+The independence in styling makes the CSS reusable in other projects, making the workflow exponentially faster.
+
+### Readibility 
+
+Just look at the example above and try telling me you wouldn't have understood what the CSS is doing without the image.
+
+### Structure
+
+The inherent organization in selector names make the structural integrity sound and makes collaboration a breeze.
+
