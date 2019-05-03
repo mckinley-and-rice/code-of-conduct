@@ -10,7 +10,7 @@ _This guide is heavily influenced by eslint guidelines._
 ## Table of Contents
 
   1. [Rules to live by](#rules-to-live-by)
-     1. [Include only on component in one JSX file](#include-onle-one-component-in-one-jsx-file)
+     1. [Include only on component in one JSX file](#include-only-one-component-in-one-jsx-file)
 
 
 ## Rules to live by
@@ -42,5 +42,140 @@ import React, { Component } from "react"
 
 class Foo extends React.Component {
   ...
+}
+```
+
+### Inherit from React.Component when component contains state/refs
+
+```js
+// good
+import React, { Component } from "react"
+
+class Foo extends React.Component {
+  ...
+}
+```
+
+### Use functional component when component has no state/refs
+
+> Avoid using functional name inference and use normal functions.
+
+```js
+// bad 
+const Foo = ({prop}) => {
+  ...
+}
+// good
+function Foo({prop}) {
+  ...
+}
+```
+
+### Use JSX extension for component files
+
+> Why? To make it easier to comprehend which files are React component files.
+
+### Keep file name and component name consistent
+
+Use PascalCase for naming files and components defined in them.
+
+```js
+// bad
+// Foo.jsx
+
+class FooComponent extends React.Component {
+  ...
+}
+
+// good
+// Foo.jsx
+
+class Foo extends React.Component {
+  ...
+}
+```
+
+However use camelCase to instantiate a component.
+
+```js
+// bad
+const CardLight = <CardLight />
+
+// good
+const cardLight = <CardLight />
+```
+
+### Always use double quotes (` " `) for JSX attributes but single quotes (` ' `) for other JS
+
+> Why? Regular HTML attributes also typically use double quotes instead of single, so JSX attributes mirror this convention.
+
+```js
+// bad
+<Foo bar='baz'/>
+
+// bad
+<Foo style={{left:"20px"}} />
+
+// good
+<Foo bar="baz"/>
+
+//good
+<Foo style={{left:'20px'}} />
+```
+
+### Omit the value of a prop when explicitly true
+
+> Why? Improves readability and looks more declarative.
+
+```js
+// bad
+<Foo visible={true}/>
+
+//good
+<Foo visible>
+```
+
+### Bind event hanlders in class constructors rather than using arrow functions
+
+> Why? A bind call in the render path creates a brand new function on every single render while arrow functions affect the performance negatively
+
+```js
+// bad
+class extends React.Component {
+  onClickDiv() {
+    // do stuff
+  }
+
+  render() {
+    return <div onClick={this.onClickDiv.bind(this)} />;
+  }
+}
+
+// very bad
+class extends React.Component {
+  onClickDiv = () => {
+    // do stuff
+  }
+
+  render() {
+    return <div onClick={this.onClickDiv} />
+  }
+}
+
+// good
+class extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.onClickDiv = this.onClickDiv.bind(this);
+  }
+
+  onClickDiv() {
+    // do stuff
+  }
+
+  render() {
+    return <div onClick={this.onClickDiv} />;
+  }
 }
 ```
