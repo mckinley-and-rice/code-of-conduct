@@ -11,6 +11,15 @@ _This guide is heavily influenced by eslint guidelines._
 
   1. [Rules to live by](#rules-to-live-by)
      1. [Include only on component in one JSX file](#include-only-one-component-in-one-jsx-file)
+     2. [Inherit from React.Component when component contains state/refs](#inherit-from-reactcomponent-when-component-contains-staterefs)
+     3. [Use functional component when component has no state/refs](#use-functional-component-when-component-has-no-staterefs)
+     4. [Use JSX extension for component files](#use-jsx-extension-for-component-files)
+     5. [Keep file name and component name consistent](#keep-file-name-and-component-name-consistent)
+     6. [Always use double quotes (` " `) for JSX attributes but single quotes (` ' `) for other JS](#always-use-double-quotes--for-jsx-attributes-but-single-quotes--for-other-js)
+     7. [Omit the value of a prop when explicitly true](#omit-the-value-of-a-prop-when-explicitly-true)
+     8. [Bind event hanlders in class constructors rather than using arrow functions](#bind-event-hanlders-in-class-constructors-rather-than-using-arrow-functions)
+  2. [Component File Entity Structure](#compoent-file-entity-structure)
+  3. [Directory Structure](#directory-structure)
 
 
 ## Rules to live by
@@ -179,3 +188,5 @@ class extends React.Component {
   }
 }
 ```
+
+## Component File Entity Structure
