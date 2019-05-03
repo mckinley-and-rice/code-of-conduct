@@ -277,4 +277,5 @@ AppName
 ```
 
 > Containers are components with state
+===
 > Components are representational components
