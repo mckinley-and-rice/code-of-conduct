@@ -10,6 +10,6 @@ The Block, Element, Modifier model, more than a CSS paradigm, is a UI paradigm. 
 It divides the UI into Blocks (Headers, Navs, Articles, Footers etc.) then declares Elements (Buttons, Inputs etc.) contained within these Blocks and finally
 assigns Modifiers(dark, outlined, disabled etc.) to these elements.
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![Button modifiers](http://getbem.com/assets/github_buttons.jpg "Button modifiers")
 
 ## An example 
