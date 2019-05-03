@@ -18,7 +18,7 @@ _This guide is heavily influenced by eslint guidelines._
      6. [Always use double quotes (` " `) for JSX attributes but single quotes (` ' `) for other JS](#always-use-double-quotes--for-jsx-attributes-but-single-quotes--for-other-js)
      7. [Omit the value of a prop when explicitly true](#omit-the-value-of-a-prop-when-explicitly-true)
      8. [Bind event hanlders in class constructors rather than using arrow functions](#bind-event-hanlders-in-class-constructors-rather-than-using-arrow-functions)
-  2. [Component File Entity Structure](#compoent-file-entity-structure)
+  2. [Component File Entity Order](#compoent-file-entity-order)
   3. [Directory Structure](#directory-structure)
 
 
@@ -189,4 +189,69 @@ class extends React.Component {
 }
 ```
 
-## Component File Entity Structure
+## Component File Entity Order
+
+When writing a React component, follow the following entity order.
+
+```js
+// PropTypes
+
+const propTypes = {
+  id: PropTypes.number.isRequired,
+  url: PropTypes.string.isRequired,
+  text: PropTypes.string,
+};
+
+// DefaultProps
+
+const defaultProps = {
+  text: 'Hello World',
+};
+
+class extends React.Component {
+  // static methods (optional)
+  
+  static foo(){
+    ...
+  }
+
+  // constructor
+
+  constructor(props) {
+    ...
+  }
+
+  // === lifecycle
+  // componentDidMount
+  // componentWillReceiveProps
+  // shouldComponentUpdate
+  // componentWillUpdate
+  // componentDidUpdate
+  // componentWillUnmount
+  // === lifecycle
+  
+  // event handlers
+
+  function onClick(){
+    ...
+  }
+
+  // optional render methods
+
+  function renderClock(){
+    return (
+      <div>
+        <Clock/>
+      </div>
+    )
+  }
+
+  // render
+
+  render(){
+    ...
+  }
+}
+```
+
+## Directory Structure
