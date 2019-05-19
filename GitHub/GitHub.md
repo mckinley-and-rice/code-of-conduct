@@ -28,7 +28,7 @@
 ```Security```  in case of vulnerabilities.
 
 
-### Blank Template for each commit 
+### Blank Template for each commit as same as change log
 
 Added :
 Changed :
