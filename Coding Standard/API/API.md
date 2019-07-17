@@ -31,17 +31,45 @@ Good endpoint name:
 ```
 /api/v1/users
 ```
+
 Bad enpoint name: 
 ```
 /api/v1/user
 ```
+
 Very bad endpoint name: 
 ```
 /api/v1/getUsers
 ```
 
-### Identifiers
-### Queries 
+### Identifiers and Queries
+
+Identifiers are unique integers/strings that are used to, well, identify a specific instance of a resource. Lets say we had to get details of a `user` with an id of `42`, the URL that we will need to hit will look something like:
+
+```
+url/resource/:id
+```
+
+which translates to
+
+```
+http://example.com/api/v1/users/42
+```
+
+Queries are parameters used to sort or filter resources according to certain conditions. Multiple queries can be concatenated (usually preceded by a `?` and seperated by `&`) as a part of the URL to get a refined set of resources. Lets say we require a list of `users` who are from India (IN) and under the age of 32, the URL will looking something like:
+
+```
+http://example.com/api/v1/users?country=IN&maxAge=32
+```
+
+where
+
+| Parameter | Value |
+| --------- | ----- |
+| country   | IN    |
+| maxAge    | 32    |
+
+
 
 ## Naming Resources
 
