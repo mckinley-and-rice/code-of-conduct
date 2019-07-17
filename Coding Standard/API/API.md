@@ -6,22 +6,39 @@ This document aims at making REST API development at McKinley & Rice a more pred
 We need to get a few important words out of the way before we dive deep into REST API territory, these are:
 
 ### Resources 
-Every *thing* you can access using an API is called a resource (Ex. `users`, `posts`, `photos` etc.). Resources are *always* nouns.
+Every __thing__ you can access using an API is called a resource (Ex. `users`, `posts`, `photos` etc.). Resources are __always__ nouns.
 
 Good resource name: `users`
+
 Bad resource name: `getUsers`
 
 ### Endpoints
-You can access these things *from* endpoints. 
+You can access these things __from__ endpoints. 
 
-URL: `http://example.com/api/v1/users`
-Endpoint: `/api/v1/users` 
+URL:
+```
+http://example.com/api/v1/users
+```
 
-All of these endpoints are named arround resources in plural and *not* actions as verbs.
+Endpoint: 
+```
+/api/v1/users
+```
 
-Good endpoint name: `/api/v1/users`
-Bad enpoint name: `/api/v1/user`
-Very bad endpoint name: `/api/v1/getUsers`
+All of these endpoints are named arround resources in plural and __not__ actions as verbs.
+
+Good endpoint name:
+```
+/api/v1/users
+```
+Bad enpoint name: 
+```
+/api/v1/user
+```
+Very bad endpoint name: 
+```
+/api/v1/getUsers
+```
 
 ### Identifiers
 ### Queries 
