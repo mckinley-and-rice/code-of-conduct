@@ -15,8 +15,8 @@ As a general rule, your commit message should start with a single line that's no
 
 For consistency, try and use the imperative present tense when creating a message. Examples:
 
-* Use "Adding tests for" instead of "I added tests for"
-* Use "Changing x to y" instead of "Changed x to y"
+* Use "Add tests for" instead of "I added tests for"
+* Use "Change x to y" instead of "Changed x to y"
 
 *This information has been curated base on the [Issues 2.0 release blog post](https://github.com/blog/831-issues-2-0-the-next-generation)*
 
