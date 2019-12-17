@@ -15,15 +15,15 @@
 
 ### Types of changes
 
-```Added ``` for new features.
+```Add ``` for new features.
 
-```Changed ``` for changes in existing functionality.
+```Changd ``` for changes in existing functionality.
 
-```Deprecated ``` for soon-to-be removed features.
+```Deprecate ``` for soon-to-be removed features.
 
-```Removed ``` for now removed features.
+```Remove ``` for now removed features.
 
-```Fixed ``` for any bug fixes.
+```Fixe ``` for any bug fixes.
 
 ```Security```  in case of vulnerabilities.
 
