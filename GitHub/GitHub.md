@@ -30,9 +30,9 @@
 
 ### Blank Template for each commit as same as change log
 
-Added :
-Changed :
-Deprecated :
-Removed :
-Fixed :
+Add :
+Change :
+Deprecate :
+Remove :
+Fixe :
 Security :
