@@ -17,7 +17,7 @@
 
 ```Add ``` for new features.
 
-```Changd ``` for changes in existing functionality.
+```Change ``` for changes in existing functionality.
 
 ```Deprecate ``` for soon-to-be removed features.
 
