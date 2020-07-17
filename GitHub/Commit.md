@@ -51,8 +51,8 @@ The syntax for closing keywords depends on whether the issue is in the same repo
 | Linked issue                    | Syntax                                | Example                                  |
 |---------------------------------|---------------------------------------|------------------------------------------|
 | Issue in the same repository    | KEYWORD #ISSUE-NUMBER                 | **Closes #10**                           |
-| Issue in a different repository | KEYWORD OWNER/REPOSITORY#ISSUE-NUMBER | **Fixes octo-org/octo-repo#100           |
-| Multiple issues                 | Use full syntax for each issue        | **Resolves #10, resolves #123, resolves octo-org/octo-repo#100 |
+| Issue in a different repository | KEYWORD OWNER/REPOSITORY#ISSUE-NUMBER | **Fixes octo-org/octo-repo#100**          |
+| Multiple issues                 | Use full syntax for each issue        | **Resolves #10, resolves #123, resolves octo-org/octo-repo#100** |
 
 
 Only manually linked pull requests can be manually unlinked. To unlink an issue that you linked using a keyword, you must edit the pull request description to remove the keyword.
