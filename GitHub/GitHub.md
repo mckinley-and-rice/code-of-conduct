@@ -48,11 +48,11 @@ Security :
 
 ### Branch Standards
 
-## Main Branch
+#### Main Branch
 * Never commit directly ro the main branch
 * For the tasks, create a new branch out of your main branch
 * Always take pull from the target branch before mergint it
 
-## Bug/Hotfix Branch
+#### Bug/Hotfix Branch
 * If there is sudden change or any bug that needs to be fixed, create a hotfix branch out of your target branch
 * The branch should have <hotfix> keywork in it
